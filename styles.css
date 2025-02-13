@@ -1,0 +1,256 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  background: #ff6b6b; /* Romantic red-pink background */
+}
+
+/* Landing Page Section */
+.landing-page {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(rgba(255, 107, 107, 0.8), rgba(255, 107, 107, 0.8)), url('landing-bg.jpg'); /* Add your landing page background image */
+  background-size: cover;
+  background-position: center;
+}
+
+.landing-page .welcome-message h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.landing-page .welcome-message p {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Falling Hearts Animation */
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  top: -10%;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/* Our Story Section */
+.our-story {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(255, 107, 107, 0.8), rgba(255, 107, 107, 0.8)), url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg'); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  margin: 0 auto; /* Center the section */
+  max-width: 100%; /* Full width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.our-story .container {
+  max-width: 800px; /* Limit content width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.our-story h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: slideIn 1s ease-in-out;
+}
+
+.our-story p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Timeline Styling */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.timeline-item h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Chat Snippets Styling */
+.chat-snippets {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat-bubble {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.chat-text {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.chat-time {
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-page .welcome-message h1 {
+    font-size: 3rem;
+  }
+
+  .landing-page .welcome-message p {
+    font-size: 1.5rem;
+  }
+
+  .our-story {
+    padding: 60px 15px;
+  }
+
+  .our-story h2 {
+    font-size: 2rem;
+  }
+
+  .our-story p {
+    font-size: 1rem;
+  }
+
+  .timeline-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-item p {
+    font-size: 0.9rem;
+  }
+
+  .chat-text {
+    font-size: 1rem;
+  }
+
+  .chat-time {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page .welcome-message h1 {
+    font-size: 2rem;
+  }
+
+  .landing-page .welcome-message p {
+    font-size: 1rem;
+  }
+
+  .our-story {
+    padding: 40px 10px;
+  }
+
+  .our-story h2 {
+    font-size: 1.8rem;
+  }
+
+  .our-story p {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-item p {
+    font-size: 0.8rem;
+  }
+
+  .chat-text {
+    font-size: 0.9rem;
+  }
+
+  .chat-time {
+    font-size: 0.7rem;
+  }
+}
