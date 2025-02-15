@@ -1,21 +1,32 @@
-// Function to Reveal Love Letter
-function revealLoveLetter() {
-    document.querySelector(".love-message").classList.remove("hidden");
-}
+// script.js
 
-// Floating Hearts Effect
-document.addEventListener("DOMContentLoaded", function () {
-    createHearts();
-});
+function startMusic() {
+    var audio = document.getElementById("background-music");
+    audio.play();
+    alert("Enjoy the surprise, Priya! 💖🎶");
+  }
+  
 
-function createHearts() {
-    const container = document.querySelector(".hearts-container");
 
-    for (let i = 0; i < 30; i++) {
-        let heart = document.createElement("div");
-        heart.className = "heart";
+  document.addEventListener("DOMContentLoaded", () => {
+    const heartWrapper = document.querySelector(".floating-heart-wrapper");
+
+    function createFloatingHeart() {
+        const heart = document.createElement("span");
+        heart.classList.add("floating-name");
+        heart.textContent = "Harish ❤️ Priya";
+
+        // Random position across the entire page width
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-        container.appendChild(heart);
+        heart.style.animationDuration = Math.random() * 4 + 4 + "s"; // 4s - 8s duration
+
+        heartWrapper.appendChild(heart);
+
+        // Remove heart after animation
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
     }
-}
+
+    setInterval(createFloatingHeart, 1500); // Generate a new floating name every 1.5s
+});
