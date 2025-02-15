@@ -1,256 +1,789 @@
-/* General Reset */
-body, html {
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: 'Pacifico', cursive;
-  color: #fff;
-  background: #ff6b6b; /* Romantic red-pink background */
+  box-sizing: border-box;
 }
 
-/* Landing Page Section */
-.landing-page {
-  height: 100vh; /* Full viewport height */
+body {
+  font-family: 'Georgia', serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Welcome Section */
+.welcome-section {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
-  background: linear-gradient(rgba(255, 107, 107, 0.8), rgba(255, 107, 107, 0.8)), url('landing-bg.jpg'); /* Add your landing page background image */
-  background-size: cover;
-  background-position: center;
-}
-
-.landing-page .welcome-message h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 2s ease-in-out;
-}
-
-.landing-page .welcome-message p {
-  font-size: 2rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  animation: fadeIn 3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Falling Hearts Animation */
-.hearts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.heart {
-  position: absolute;
-  top: -10%;
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
-  animation: fall 10s linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-10%) rotate(0deg);
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
-/* Our Story Section */
-.our-story {
-  padding: 80px 20px;
-  background: linear-gradient(rgba(255, 107, 107, 0.8), rgba(255, 107, 107, 0.8)), url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg'); /* Add your background image */
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
-  margin: 0 auto; /* Center the section */
-  max-width: 100%; /* Full width */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.our-story .container {
-  max-width: 800px; /* Limit content width */
-  margin: 0 auto; /* Center the container */
-  padding: 0 20px; /* Add padding for smaller screens */
+/* Our Story Section - Romantic Background */
+.our-story {
+  padding: 50px 20px;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
 }
 
-.our-story h2 {
+.story-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  animation: slideIn 1s ease-in-out;
 }
 
-.our-story p {
+.story-section p {
   font-size: 1.2rem;
   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Fixing Click for Surprise Button */
+.welcome-message button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background-color: #ff6b6b;
   color: #fff;
-  margin-bottom: 20px;
-  animation: slideIn 1.5s ease-in-out;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Timeline Styling */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.timeline-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 600px;
-  text-align: left;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.timeline-item h3 {
-  font-size: 1.5rem;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.timeline-item p {
-  font-size: 1rem;
-  color: #fff;
+.welcome-message button:hover {
+  background-color: #ff4757;
 }
 
 /* Chat Snippets Styling */
 .chat-snippets {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .chat-bubble {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 15px;
-  width: 100%;
-  max-width: 600px;
-  text-align: left;
-  animation: fadeIn 2s ease-in-out;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+  position: relative;
 }
 
-.chat-text {
-  font-size: 1.1rem;
+.chat-bubble.you {
+  background: #ff6b6b;
   color: #fff;
-  margin-bottom: 5px;
+  margin-right: auto;
 }
 
-.chat-time {
-  font-size: 0.9rem;
-  color: #fff;
-  text-align: right;
+.chat-bubble.me {
+  background: #fff;
+  color: #333;
+  margin-left: auto;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .landing-page .welcome-message h1 {
-    font-size: 3rem;
-  }
-
-  .landing-page .welcome-message p {
-    font-size: 1.5rem;
-  }
-
-  .our-story {
-    padding: 60px 15px;
-  }
-
-  .our-story h2 {
+  .story-section h2 {
     font-size: 2rem;
   }
 
-  .our-story p {
+  .story-section p {
     font-size: 1rem;
-  }
-
-  .timeline-item h3 {
-    font-size: 1.3rem;
-  }
-
-  .timeline-item p {
-    font-size: 0.9rem;
-  }
-
-  .chat-text {
-    font-size: 1rem;
-  }
-
-  .chat-time {
-    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 480px) {
-  .landing-page .welcome-message h1 {
-    font-size: 2rem;
+
+
+
+/* Our Fights Section */
+.our-fights {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+  backdrop-filter: blur(5px);
+}
+
+/* Section Title */
+.our-fights h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Fight Box */
+.fight-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 8px solid transparent;
+  border-image: url('heart-border.png') 30 round;
+}
+
+/* Hover Effect - Heart Fly */
+.fight-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Animated Flying Heart */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: url('heart-border.png') center/cover no-repeat;
+  animation: fly-heart 1.5s infinite ease-in-out;
+}
+
+/* Heart Animation */
+@keyframes fly-heart {
+  0% {
+      transform: translate(-50%, 0) scale(0.8);
+      opacity: 0;
+  }
+  50% {
+      transform: translate(-50%, -30px) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -60px) scale(0.8);
+      opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-fights h2 {
+      font-size: 2rem;
   }
 
-  .landing-page .welcome-message p {
-    font-size: 1rem;
+  .fight-box {
+      padding: 15px;
   }
 
-  .our-story {
-    padding: 40px 10px;
+  .fight-box h3 {
+      font-size: 1.5rem;
   }
 
-  .our-story h2 {
-    font-size: 1.8rem;
+  .fight-box p {
+      font-size: 1rem;
+  }
+}
+
+
+
+
+/* Our Memories Section */
+.our-memories {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+}
+
+/* Section Title */
+.our-memories h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Memory Boxes */
+.memory-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover Effect */
+.memory-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Photo Gallery */
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Video Montage */
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  background: rgba(255, 0, 102, 0.7);
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.play-button:hover {
+  background: rgba(255, 0, 102, 1);
+}
+
+/* Our Trips */
+.trip-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trip-card {
+  width: 200px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.trip-card:hover {
+  transform: scale(1.05);
+}
+
+.trip-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-memories h2 {
+      font-size: 2rem;
   }
 
-  .our-story p {
-    font-size: 0.9rem;
+  .memory-box {
+      padding: 15px;
   }
 
-  .timeline-item h3 {
-    font-size: 1.2rem;
+  .gallery-img {
+      width: 100px;
+      height: 100px;
   }
 
-  .timeline-item p {
-    font-size: 0.8rem;
+  .play-button {
+      font-size: 2rem;
   }
 
-  .chat-text {
-    font-size: 0.9rem;
+  .trip-card {
+      width: 150px;
+  }
+}
+
+
+
+/* Why I Love You Section */
+.why-i-love-you {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+}
+
+/* Section Title */
+.why-i-love-you h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Love Boxes */
+.love-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover Effect */
+.love-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Love Letter */
+.love-letter {
+  font-size: 1.2rem;
+  font-family: 'Dancing Script', cursive;
+  color: #ffd1dc;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Love List */
+.love-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.love-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(255, 0, 102, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.love-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.8);
+}
+
+/* Love Note */
+.love-note {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  color: #ff80ab;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-i-love-you h2 {
+      font-size: 2rem;
   }
 
-  .chat-time {
-    font-size: 0.7rem;
+  .love-box {
+      padding: 15px;
   }
+
+  .love-list {
+      flex-direction: column;
+  }
+
+  .love-item {
+      width: 90%;
+      margin: auto;
+  }
+
+  .love-note {
+      font-size: 1.2rem;
+  }
+}
+
+
+
+/* Future Plans Section */
+.future-plans {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+}
+
+/* Section Title */
+.future-plans h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Future Boxes */
+.future-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.future-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Bucket List */
+.bucket-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.bucket-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(255, 0, 102, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bucket-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.8);
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 80%;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "⬤";
+  color: #ff4081;
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Promise Note */
+.promise-note {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  color: #ff80ab;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .future-plans h2 {
+      font-size: 2rem;
+  }
+
+  .future-box {
+      padding: 15px;
+  }
+
+  .bucket-list {
+      flex-direction: column;
+  }
+
+  .bucket-item {
+      width: 90%;
+      margin: auto;
+  }
+
+  .promise-note {
+      font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+/* Surprise Section */
+.surprise-section {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+}
+
+/* Section Title */
+.surprise-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Surprise Boxes */
+.surprise-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.surprise-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Poem & Proposal */
+.proposal-hint, .poem {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: #ff80ab;
+}
+
+/* Secret Message */
+.secret-message {
+  position: relative;
+}
+
+.hidden-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+  color: #ff80ab;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Button */
+.secret-message button {
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.secret-message button:hover {
+  background: #ff80ab;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .surprise-section h2 {
+      font-size: 2rem;
+  }
+
+  .surprise-box {
+      padding: 15px;
+  }
+}
+
+
+
+/* Contact Me Section */
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+}
+
+/* Section Title */
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Playful Message */
+.contact-message {
+  font-size: 190%;
+  font-style: italic;
+  color: #272122;
+  margin-bottom: 20px;
+}
+
+/* Contact Buttons */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Button Styles */
+.contact-btn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  transition: 0.3s;
+  border: 2px solid #ff4081;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  animation: heartbeat 1.5s infinite;
+}
+
+/* Heartbeat Effect */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Hover Effect */
+.contact-btn:hover {
+  background: #ff4081;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section h2 {
+      font-size: 2rem;
+  }
+
+  .contact-buttons {
+      flex-direction: column;
+  }
+
+  .contact-btn {
+      width: 80%;
+      text-align: center;
+  }
+}
+
+
+
+/* Floating Hearts - Across All Sections */
+.floating-heart-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent clicking on floating hearts */
+  z-index: 1000;
+}
+
+/* Floating Name with Heart */
+.floating-name {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4d6d;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 8px 12px;
+  border-radius: 50px;
+  animation: floatHearts 6s linear infinite;
+  white-space: nowrap;
+}
+
+/* Heart Animation */
+@keyframes floatHearts {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
 }
