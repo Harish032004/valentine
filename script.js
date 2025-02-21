@@ -30,3 +30,34 @@ function startMusic() {
 
     setInterval(createFloatingHeart, 1500); // Generate a new floating name every 1.5s
 });
+
+
+
+
+
+function calculateLove() {
+    let yourName = document.getElementById("yourName").value;
+    let partnerName = document.getElementById("partnerName").value;
+
+    if (yourName.trim() === "" || partnerName.trim() === "") {
+        alert("Please enter both names!");
+        return;
+    }
+
+    // Love percentage (always more than 90%)
+    let lovePercentage = Math.floor(Math.random() * 10) + 90;
+
+    // Display result
+    document.getElementById("result").innerHTML = `💖 ${yourName} & ${partnerName} Love Percentage: ${lovePercentage}% 💖`;
+
+    // Show love question after result
+    document.getElementById("love-question").classList.remove("hidden");
+}
+
+function showLoveResponse() {
+    document.getElementById("love-response").classList.remove("hidden");
+}
+
+
+
+
