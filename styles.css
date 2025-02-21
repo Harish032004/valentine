@@ -787,3 +787,406 @@ body {
   50% { opacity: 1; }
   100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
 }
+
+
+/* Nearly Breakup Fights Section */
+.breakup-fights {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+  backdrop-filter: blur(5px);
+  background-attachment: fixed;
+}
+
+/* Section Title */
+.breakup-fights h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Fight Box - Flip Animation */
+.fight-box {
+  width: 320px;
+  margin: 20px auto;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: height 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner Flip Container */
+.fight-box-inner {
+  width: 100%;
+  text-align: center;
+  transition: transform 0.6s ease-in-out, height 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Flipped Effect */
+.fight-box.flipped .fight-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Sides */
+.fight-box-front, .fight-box-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+  border: 2px solid rgba(255, 0, 102, 0.4);
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Front Side */
+.fight-box-front {
+  background: rgba(255, 0, 102, 0.2);
+  color: white;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Back Side */
+.fight-box-back {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transform: rotateY(180deg);
+  font-size: 1rem;
+  padding: 20px;
+  text-align: left;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+  display: none; /* Initially hide paragraph */
+}
+
+/* Show the front by default */
+.fight-box:not(.flipped) .fight-box-front {
+  display: flex;
+}
+
+/* Show the back content when flipped */
+.fight-box.flipped .fight-box-back {
+  display: block;
+}
+
+/* Adjust Box Height Dynamically */
+.fight-box.flipped {
+  height: auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .breakup-fights h2 {
+      font-size: 2rem;
+  }
+
+  .fight-box {
+      width: 90%;
+  }
+
+  .fight-box-front, .fight-box-back {
+      font-size: 1rem;
+      padding: 15px;
+  }
+}
+
+
+
+
+/* Our Birthdays Section */
+.our-birthdays {
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+  backdrop-filter: blur(5px);
+}
+
+/* Section Title */
+.our-birthdays h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Birthday Box - Glassmorphism */
+.birthday-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(255, 0, 150, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+}
+
+/* Hover Effect */
+.birthday-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 0, 150, 0.7);
+  border: 2px solid rgba(255, 0, 150, 0.5);
+}
+
+/* Birthday Text */
+.birthday-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.birthday-box p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffccff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .our-birthdays h2 {
+      font-size: 2rem;
+  }
+
+  .birthday-box {
+      padding: 15px;
+  }
+
+  .birthday-box h3 {
+      font-size: 1.5rem;
+  }
+
+  .birthday-box p {
+      font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffe6f2;
+  color: #333;
+  text-align: center;
+}
+
+/* Love Playlist Section */
+.love-playlist {
+  padding: 50px 20px;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+  color: white;
+}
+
+.love-playlist h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Playlist Container */
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Song Card */
+.song-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0px 5px 15px rgba(255, 0, 102, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.song-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(255, 0, 102, 0.8);
+}
+
+/* YouTube & Spotify Embed */
+.song-card iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Song Info */
+.song-info h3 {
+  font-size: 1.3rem;
+  margin: 10px 0 5px;
+  color: #ff69b4;
+}
+
+.song-info p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .playlist-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .song-card {
+      width: 90%;
+  }
+
+  .love-playlist h2 {
+      font-size: 2rem;
+  }
+}
+
+
+
+
+
+/* Love Calculator Section */
+.love-calculator {
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+  background: url('WhatsApp\ Image\ 2025-02-13\ at\ 10.39.16\ PM.jpeg') center/cover no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title */
+.love-calculator h2 {
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Input & Button Styling */
+.input-box {
+  margin-top: 20px;
+}
+
+.input-box input {
+  padding: 12px;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #ff4d6d;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.input-box button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-box button:hover {
+  background: #ff1a4c;
+}
+
+/* Result Box */
+.result-box {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 15px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Love Question */
+#love-question {
+  margin-top: 20px;
+}
+
+#love-question h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#love-question button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+}
+
+#love-question button:hover {
+  background: #ff1a4c;
+}
+
+/* Love Response */
+#love-response {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* Hide Elements Initially */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .love-calculator h2 {
+      font-size: 2rem;
+  }
+  .input-box input {
+      width: 90%;
+  }
+  .input-box button {
+      font-size: 1rem;
+  }
+  .result-box {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+
